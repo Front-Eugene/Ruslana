@@ -52,13 +52,13 @@ a {
     color: inherit;
 }
 
-.davil {
+/* .davil {
     padding: 50px 0 !important;
     background: url(davil.webp) center center/cover no-repeat;
     background-attachment: fixed;
-}
+} */
 
-.bg-img {
+/* .bg-img {
     background: url(bg-1.jpg) center center/cover no-repeat;
     background-attachment: fixed;
 }
@@ -66,16 +66,16 @@ a {
 .skills.bg-img .container {
     position: relative;
     z-index: 100;
-}
+} */
 
-.shadow {
+/* .shadow {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: linear-gradient(#fbf7f5, #ffffff7e);
-}
+} */
 
 .my-title {
     font-size: 30px;
