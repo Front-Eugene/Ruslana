@@ -553,4 +553,9 @@ a {
     .photo-section .item {
         width: 90%;
     }
+
+    .profile-circle.music-button {
+        right: 10px;
+        top: 10px;
+    }
 }
