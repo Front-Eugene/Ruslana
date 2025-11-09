@@ -87,7 +87,6 @@ const musicButton = document.querySelector('.profile-circle.music-button');
 
 const images = document.querySelectorAll('.gallery');
 
-// Создание элементов
 const sliderOverlay = document.createElement('div');
 sliderOverlay.className = 'gallery-slider-overlay';
 
@@ -114,12 +113,23 @@ document.body.appendChild(sliderOverlay);
 
 let currentIndex = 0;
 
+function getBackgroundImageUrl(element) {
+  // style.backgroundImage: url("r1.jpg")
+  const bg = element.style.backgroundImage;
+  // Извлекаем URL между кавычками
+  const urlMatch = bg.match(/url\(["']?(.+?)["']?\)/);
+  return urlMatch ? urlMatch[1] : null;
+}
+
 function showImage(index) {
   if (index < 0) index = images.length - 1;
   if (index >= images.length) index = 0;
   currentIndex = index;
-  sliderImage.src = images[currentIndex].src;
-  sliderOverlay.classList.add('active');
+  const url = getBackgroundImageUrl(images[currentIndex]);
+  if (url) {
+    sliderImage.src = url;
+    sliderOverlay.classList.add('active');
+  }
 }
 
 images.forEach((img, idx) => {
